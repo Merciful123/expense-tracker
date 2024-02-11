@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Col,  Row } from "react-bootstrap";
 import "./index.css"
+import AddExpense from "../AddExpense";
 const Navbar = () => {
   return (
     <div className="">
@@ -19,9 +20,10 @@ const Navbar = () => {
           md={2}
           className="d-flex justify-content-center align-items-center"
         >
-          <Button className="primary center mt-1 px-2 bg-black border-0">
+          {/* <Button className="primary center mt-1 px-2 bg-black border-0">
             Log Credit
-          </Button>
+          </Button> */}
+          <AddExpense/>
         </Col>
         <Col
           xs={3}
