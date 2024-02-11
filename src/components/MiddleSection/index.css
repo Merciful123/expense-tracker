@@ -1,0 +1,23 @@
+.middle-container{
+    /* min-height: 90vh; */
+}
+
+.left-section, .middle-section, .right-section{
+    min-height: 80vh;
+}
+
+.middle-section-child{
+    min-height: 15vh !important;
+    /* margin: 20px; */
+}
+.middle-section-child-lower{
+    min-height: 40vh;
+}
+
+@media screen and (max-width: 576px) {
+    .left-section,  .right-section{
+        min-height: 20vh;
+    }
+     
+    
+}
