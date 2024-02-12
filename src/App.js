@@ -6,26 +6,26 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import CategoryExpense from './components/CategoryExpense';
+import CategoryExpenseFoods, { CategoryExpenseBills, CategoryExpenseEntertainment } from './components/CategoryExpense';
 import CategoryElement from './components/CategoryElement';
+import MyStats from './components/MyStats';
 
 
 
 function App() {
   return (
     <div className="min-w-100 app-container border m-4 overflow-x-hidden mb-4">
-      {/* <Navbar />
-      <Middle/> */}
+       
       <Router>
         <Navbar />
         <Routes>
-          {/* <Route path="/" element={<Navbar />} /> */}
           <Route path="/" element={<Middle />} />
-          <Route path="/category/foods" element={<CategoryExpense />} />
-
+          <Route path="/category/foods" element={<CategoryExpenseFoods />} />
+          <Route path="/category/bills" element={<CategoryExpenseBills />} />
+          <Route path="/category/entertainment" element={<CategoryExpenseEntertainment />} />
           <Route path="/category/:id" element={<CategoryElement />} />
+          <Route path="/mystats" element={<MyStats />} />
         </Routes>
-        {/* <Footer /> */}
       </Router>
     </div>
   );

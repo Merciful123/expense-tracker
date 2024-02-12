@@ -1,8 +1,14 @@
 import React from "react";
 import "./index.css";
 import LeftSidebar from "../LeftSideBar";
+import { selectExpenses } from "../../redux/expenseSlice";
+import { useSelector } from "react-redux";
+import { ListGroup } from "react-bootstrap";
 
 const Middle = () => {
+  const expenses = useSelector(selectExpenses);
+  console.log(expenses);
+
   return (
     <div className="middle-container row middle-bg d-flex justify-content-center w-100">
       <div className="left-section col-xs-12 col-lg-2 border bg-white m-4">
@@ -27,18 +33,32 @@ const Middle = () => {
         </div>
         <div className="row d-flex justify-content-center align-items-center m-lg-4">
           <div className="col-10 border middle-section-child-lower bg-white">
-            lower
+            Graph needs to be created
           </div>
         </div>
       </div>
       <div className="right-section col-xs-12 col-lg-2 border m-4 bg-white ">
         <div className="fw-bold p-2">YOUR TRANSATION HISTORY</div>
         <div className="d-flex justify-content-between mt-4">
-          <div className="p-2">
-            <div>Name</div>
-            <div className="fw-lighter">Date</div>
-          </div>
-          <div>price</div>
+          <ListGroup className="w-100">
+            {expenses?.map((exp) => {
+              if (exp.category && exp?.itemName) {
+                return (
+                  <>
+                    <ListGroup.Item action href="#link1" key={exp.id}>
+                      {exp.itemName}
+                    </ListGroup.Item>
+                    <ListGroup.Item action href="#link1" key={exp.id}>
+                      {exp.date}
+                    </ListGroup.Item>
+                    <ListGroup.Item action href="#link1" key={exp.id}>
+                      {exp.price}
+                    </ListGroup.Item>
+                  </>
+                );
+              }
+            })}
+          </ListGroup>
         </div>
       </div>
     </div>

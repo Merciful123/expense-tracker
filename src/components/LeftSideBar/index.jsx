@@ -13,39 +13,29 @@ const LeftSidebar = () => {
         DASHBOARDS
       </NavLink>
       <NavLink
-        to="/"
+        to="/category/foods"
         // activeClassName="active"
-        className="/category/foods"
       >
         FOODS
       </NavLink>
       <NavLink
-        to="/"
+        to="/category/bills"
         // activeClassName="active"
-        className="category/bills"
       >
         BILLS AND PAYMENTS
       </NavLink>
       <NavLink
-        to="/"
+        to="/category/entertainment"
         // activeClassName="active"
-        className="category/entertainment"
       >
         ENTERTAINMENT
       </NavLink>
       <NavLink
-        to="/"
+        to="/mystats"
         // activeClassName="active"
-        className="/mystats"
       >
         MY STATS
       </NavLink>
-
-      {/* <div className="fw-bolder text-secondary">DASHBOARDS</div>
-      <div className="fw-bolder text-secondary">FOODS</div>
-      <div className="fw-bolder  text-secondary">BILLS AND PAYMENTS</div>
-      <div className="fw-bolder text-secondary">ENTERTAINMENT</div>
-      <div className="fw-bolder text-secondary">MY STATS</div> */}
     </div>
   );
 }
