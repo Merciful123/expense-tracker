@@ -5,12 +5,12 @@ import { selectExpenses } from "../../redux/expenseSlice";
 import { useSelector } from "react-redux";
 import { ListGroup } from "react-bootstrap";
 
-const Middle = () => {
+const MiddleSection = () => {
   const expenses = useSelector(selectExpenses);
   console.log(expenses);
 
   return (
-    <div className="middle-container row middle-bg d-flex justify-content-center w-100">
+    <div className="middle-container row middle-bg d-flex justify-content-center min-w-xs-100">
       <div className="left-section col-xs-12 col-lg-2 border bg-white m-4">
         <LeftSidebar />
       </div>
@@ -54,6 +54,7 @@ const Middle = () => {
                     <ListGroup.Item action href="#link1">
                       {exp.price}
                     </ListGroup.Item>
+                    <hr />
                   </React.Fragment>
                 );
               } else {
@@ -67,4 +68,4 @@ const Middle = () => {
   );
 };
 
-export default Middle;
+export default MiddleSection;

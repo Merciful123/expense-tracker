@@ -18,5 +18,8 @@
     .middle-section-child-lower{
         min-height: 60vh;
     }
+    .middle-container{
+        min-width: 100% !important;
+    }
     
 }
