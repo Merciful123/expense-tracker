@@ -60,7 +60,7 @@ const AddExpense = () => {
 
   return (
     <>
-      <Button className="mt-1 px-2 bg-black border-0" onClick={handleShow}>
+      <Button className="mt-1  bg-black border-0" onClick={handleShow}>
         ADD EXPENSE
       </Button>
 
@@ -107,7 +107,7 @@ const AddExpense = () => {
             </Form.Group>
 
             <Button variant="primary" type="submit">
-              Submit
+              Add 
             </Button>
           </Form>
         </Modal.Body>

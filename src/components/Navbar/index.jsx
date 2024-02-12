@@ -7,8 +7,8 @@ const Navbar = () => {
     <div className="">
       <Row className="navbar-container border">
         <Col
-          xs={6}
-          md={8}
+          xs={7}
+          md={10}
           className=" d-flex justify-content-start  align-items-center"
         >
           <div className="logo-text fs-3 fw-bolder mx-sm-5 ">
@@ -16,16 +16,14 @@ const Navbar = () => {
           </div>
         </Col>
         <Col
-          xs={3}
+          xs={5}
           md={2}
           className="d-flex justify-content-center align-items-center"
         >
-          {/* <Button className="primary center mt-1 px-2 bg-black border-0">
-            Log Credit
-          </Button> */}
+          
           <AddExpense/>
         </Col>
-        <Col
+        {/* <Col
           xs={3}
           md={2}
           className="d-flex justify-content-center align-items-center m-0"
@@ -33,7 +31,7 @@ const Navbar = () => {
           <Button className="primary mt-1 bg-black border-0">
             Log Expense
           </Button>
-        </Col>
+        </Col> */}
       </Row>
     </div>
   );
