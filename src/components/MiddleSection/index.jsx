@@ -41,21 +41,23 @@ const Middle = () => {
         <div className="fw-bold p-2">YOUR TRANSATION HISTORY</div>
         <div className="d-flex justify-content-between mt-4">
           <ListGroup className="w-100">
-            {expenses?.map((exp) => {
-              if (exp.category && exp?.itemName) {
+            {expenses.map((exp) => {
+              if (exp.category && exp.itemName) {
                 return (
-                  <>
-                    <ListGroup.Item action href="#link1" key={exp.id}>
+                  <React.Fragment key={exp.id}>
+                    <ListGroup.Item action href="#link1">
                       {exp.itemName}
                     </ListGroup.Item>
-                    <ListGroup.Item action href="#link1" key={exp.id}>
+                    <ListGroup.Item action href="#link1">
                       {exp.date}
                     </ListGroup.Item>
-                    <ListGroup.Item action href="#link1" key={exp.id}>
+                    <ListGroup.Item action href="#link1">
                       {exp.price}
                     </ListGroup.Item>
-                  </>
+                  </React.Fragment>
                 );
+              } else {
+                return null;
               }
             })}
           </ListGroup>
