@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Col,  Row } from "react-bootstrap";
+import {  Col,  Row } from "react-bootstrap";
 import "./index.css"
 import AddExpense from "../AddExpense";
 const Navbar = () => {
@@ -23,15 +23,6 @@ const Navbar = () => {
           
           <AddExpense/>
         </Col>
-        {/* <Col
-          xs={3}
-          md={2}
-          className="d-flex justify-content-center align-items-center m-0"
-        >
-          <Button className="primary mt-1 bg-black border-0">
-            Log Expense
-          </Button>
-        </Col> */}
       </Row>
     </div>
   );
